@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, createContext, useCallback} from 'react';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import Map from './Map';
 
 const Send = ({ size = 24, ...props }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -52,37 +54,39 @@ const formatMessage = (content) => {
   });
 };
 
-const TravelChatbot = () => {
-  const [input, setInput] = useState('');
-  const [messages, setMessages] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+export const MapContext = createContext();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!input.trim()) return;
+const ChatInterface = ({ messages, isLoading, input, setInput, handleSubmit, mapHtml, locationName }) => {
+  const navigate = useNavigate();
 
-    setIsLoading(true);
-    setMessages(prev => [...prev, { type: 'user', content: input }]);
+  const formatMessageWithLink = useCallback((content) => {
+    if (!mapHtml || !locationName) return content;
 
-    try {
-      const response = await fetch('https://c99c-2607-ec80-c00-217a-6d-f8e8-50ad-599a.ngrok-free.app/ask', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: input })
-      });
+    const lines = content.split('\n');
+    
+    return lines.map((line, index) => {
+      if (/^\d+\./.test(line)) {
+        return <p key={index} className="font-bold mt-2">{line}</p>;
+      }
 
-      if (!response.ok) throw new Error('Failed to get response');
-      
-      const data = await response.json();
-      setMessages(prev => [...prev, { type: 'bot', content: data.response }]);
-    } catch (error) {
-      console.error('Error:', error);
-      setMessages(prev => [...prev, { type: 'bot', content: "Sorry, I couldn't process your request." }]);
-    } finally {
-      setIsLoading(false);
-      setInput('');
-    }
-  };
+      const parts = line.split(new RegExp(`(${locationName})`, 'gi'));
+      return (
+        <p key={index} className="ml-4">
+          {parts.map((part, i) => 
+            part.toLowerCase() === locationName.toLowerCase() ? (
+              <span 
+                key={i}
+                className="text-blue-500 underline cursor-pointer"
+                onClick={() => navigate('/map')}
+              >
+                {part}
+              </span>
+            ) : part
+          )}
+        </p>
+      );
+    });
+  }, [mapHtml, locationName, navigate]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-green-100 flex flex-col justify-center items-center p-4">
@@ -98,7 +102,7 @@ const TravelChatbot = () => {
                 <div className={`inline-block p-2 rounded-lg ${
                   msg.type === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-800'
                 }`}>
-                  {msg.type === 'user' ? msg.content : formatMessage(msg.content)}
+                  {msg.type === 'user' ? msg.content : formatMessageWithLink(msg.content)}
                 </div>
               </div>
             ))}
@@ -124,6 +128,66 @@ const TravelChatbot = () => {
         </CardContent>
       </Card>
     </div>
+  );
+};
+
+const TravelChatbot = () => {
+  const [input, setInput] = useState('');
+  const [messages, setMessages] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [mapHtml, setMapHtml] = useState(null);
+  const [locationName, setLocationName] = useState(null);
+
+  const handleSubmit = useCallback(async (e) => {
+    e.preventDefault();
+    if (!input.trim()) return;
+
+    setIsLoading(true);
+    setMessages(prev => [...prev, { type: 'user', content: input }]);
+
+    try {
+      const response = await fetch('https://4812-2607-ec80-c00-217a-6d-f8e8-50ad-599a.ngrok-free.app/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: input })
+      });
+
+      if (!response.ok) throw new Error('Failed to get response');
+      
+      const data = await response.json();
+      setMessages(prev => [...prev, { type: 'bot', content: data.response }]);
+      if (data.map_html) {
+        setMapHtml(data.map_html);
+        setLocationName(data.location_name);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setMessages(prev => [...prev, { type: 'bot', content: "Sorry, I couldn't process your request." }]);
+    } finally {
+      setIsLoading(false);
+      setInput('');
+    }
+  }, [input]);
+
+  return (
+    <MapContext.Provider value={{ mapHtml, locationName }}>
+      <Router>
+        <Routes>
+          <Route path="/" element={
+            <ChatInterface 
+              messages={messages}
+              isLoading={isLoading}
+              input={input}
+              setInput={setInput}
+              handleSubmit={handleSubmit}
+              mapHtml={mapHtml}
+              locationName={locationName}
+            />
+          } />
+          <Route path="/map" element={<Map />} />
+        </Routes>
+      </Router>
+    </MapContext.Provider>
   );
 };
 
