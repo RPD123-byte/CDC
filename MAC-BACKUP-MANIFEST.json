@@ -1,0 +1,167 @@
+{
+  "source_folder": "repositories/RPD123-byte/CDC",
+  "snapshot": "working-tree",
+  "source_ref": null,
+  "source_commit": "d97e699db30a63f7cedde7a516bbd093c529eb55",
+  "excluded": [],
+  "redacted": [],
+  "files": {
+    "tailwind.config.js": {
+      "original_sha256": "223c0bfff602384a77866b47d63d436baa983f5d128c1550b128af8d8c969ebc",
+      "backup_sha256": "223c0bfff602384a77866b47d63d436baa983f5d128c1550b128af8d8c969ebc",
+      "mode": "100644"
+    },
+    ".forge.input.history": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "100644"
+    },
+    "README.md": {
+      "original_sha256": "70eafbc7a5fd466aa3213b5a7e1b2a41383cbe5d4e6fc5f4582efc58bdb509d1",
+      "backup_sha256": "70eafbc7a5fd466aa3213b5a7e1b2a41383cbe5d4e6fc5f4582efc58bdb509d1",
+      "mode": "100644"
+    },
+    ".gitignore": {
+      "original_sha256": "79ca445ea05519b26cb098a729a4f7d3c625cfb2e3187032bc0e7ba0a36a5d4e",
+      "backup_sha256": "79ca445ea05519b26cb098a729a4f7d3c625cfb2e3187032bc0e7ba0a36a5d4e",
+      "mode": "100644"
+    },
+    "package-lock.json": {
+      "original_sha256": "de66a3fd3ec78bdaf8428efa4380254a2ffd08d772244904637bca8f2e5fdeef",
+      "backup_sha256": "de66a3fd3ec78bdaf8428efa4380254a2ffd08d772244904637bca8f2e5fdeef",
+      "mode": "100644"
+    },
+    "package.json": {
+      "original_sha256": "7d3e686e9b56f6134f2c0554912149359c9ddfa943e09565d9aaca4c517b2062",
+      "backup_sha256": "7d3e686e9b56f6134f2c0554912149359c9ddfa943e09565d9aaca4c517b2062",
+      "mode": "100644"
+    },
+    ".forge.chat.history.md": {
+      "original_sha256": "e52b144c218a9a432d9bb952a1ead5aa0bf3ca85e9fd49eaeb5895bf1be71379",
+      "backup_sha256": "e52b144c218a9a432d9bb952a1ead5aa0bf3ca85e9fd49eaeb5895bf1be71379",
+      "mode": "100644"
+    },
+    "postcss.config.js": {
+      "original_sha256": "251ecddd4672c9cf467547e3dc535de00ad2129df26e7e7ae728fa4e5ac45fc5",
+      "backup_sha256": "251ecddd4672c9cf467547e3dc535de00ad2129df26e7e7ae728fa4e5ac45fc5",
+      "mode": "100644"
+    },
+    ".forge.tags.cache.v3/cache.db-shm": {
+      "original_sha256": "9e117a99d54f57be2738150fd32b15402e5ff54e328ef50bdb476f5fce730869",
+      "backup_sha256": "9e117a99d54f57be2738150fd32b15402e5ff54e328ef50bdb476f5fce730869",
+      "mode": "100644"
+    },
+    ".forge.tags.cache.v3/cache.db-wal": {
+      "original_sha256": "fab045f76bd6cc28c8b1db0ffe9d329283a833bc8b0c088c1caa41573acc6624",
+      "backup_sha256": "fab045f76bd6cc28c8b1db0ffe9d329283a833bc8b0c088c1caa41573acc6624",
+      "mode": "100644"
+    },
+    ".forge.tags.cache.v3/cache.db": {
+      "original_sha256": "943a25eed77d514bf00e38c65ae0a733eac28fb7178ba22f5f4823331fe010a4",
+      "backup_sha256": "943a25eed77d514bf00e38c65ae0a733eac28fb7178ba22f5f4823331fe010a4",
+      "mode": "100644"
+    },
+    "public/favicon.ico": {
+      "original_sha256": "3d10f7da6c603178340081668c4ac5b3ae9743ca9a262ab0fcd312fbb9f48bdd",
+      "backup_sha256": "3d10f7da6c603178340081668c4ac5b3ae9743ca9a262ab0fcd312fbb9f48bdd",
+      "mode": "100644"
+    },
+    "public/index.html": {
+      "original_sha256": "20afc17b6358bfdf5d74513225cd4a73443fa0bd15b944af71e143f694a5cf7c",
+      "backup_sha256": "20afc17b6358bfdf5d74513225cd4a73443fa0bd15b944af71e143f694a5cf7c",
+      "mode": "100644"
+    },
+    "public/logo512.png": {
+      "original_sha256": "9ea4f4da7050c0cc408926f6a39c253624e9babb1d43c7977cd821445a60b461",
+      "backup_sha256": "9ea4f4da7050c0cc408926f6a39c253624e9babb1d43c7977cd821445a60b461",
+      "mode": "100644"
+    },
+    "public/manifest.json": {
+      "original_sha256": "6f1e2a129527969d793057b6f1ffa89e3b108b4c9c58629353cf3d57cf485051",
+      "backup_sha256": "6f1e2a129527969d793057b6f1ffa89e3b108b4c9c58629353cf3d57cf485051",
+      "mode": "100644"
+    },
+    "public/robots.txt": {
+      "original_sha256": "90d24bc3bf698ac1e173739502298ccca72adf1f564fab05f484b8c48d1cadd2",
+      "backup_sha256": "90d24bc3bf698ac1e173739502298ccca72adf1f564fab05f484b8c48d1cadd2",
+      "mode": "100644"
+    },
+    "public/logo192.png": {
+      "original_sha256": "c386396ec70db3608075b5fbfaac4ab1ccaa86ba05a68ab393ec551eb66c3e00",
+      "backup_sha256": "c386396ec70db3608075b5fbfaac4ab1ccaa86ba05a68ab393ec551eb66c3e00",
+      "mode": "100644"
+    },
+    "src/reportWebVitals.js": {
+      "original_sha256": "714851669856152806c289f9aac6240b414bbac50c60ee4f7e6247f31eac0c1c",
+      "backup_sha256": "714851669856152806c289f9aac6240b414bbac50c60ee4f7e6247f31eac0c1c",
+      "mode": "100644"
+    },
+    "src/App.css": {
+      "original_sha256": "c5ac42e56bf8c34eb741d752bc879144f186d7ca0a48fcbb73b967177f7a9240",
+      "backup_sha256": "c5ac42e56bf8c34eb741d752bc879144f186d7ca0a48fcbb73b967177f7a9240",
+      "mode": "100644"
+    },
+    "src/index.js": {
+      "original_sha256": "39f6891bebce856ce604ea450f08ace26fa1b931415985881fbb323f63ba26fb",
+      "backup_sha256": "39f6891bebce856ce604ea450f08ace26fa1b931415985881fbb323f63ba26fb",
+      "mode": "100644"
+    },
+    "src/index.css": {
+      "original_sha256": "3aa7488d64efc64b70687eb21ab49eb18d7c8d9f371e35cfd8fa40d86e1b9841",
+      "backup_sha256": "3aa7488d64efc64b70687eb21ab49eb18d7c8d9f371e35cfd8fa40d86e1b9841",
+      "mode": "100644"
+    },
+    "src/App.test.js": {
+      "original_sha256": "f7784693194b8657d1bf70c37ea70f4a2d694c4566ec41550a8e650eb600aaa4",
+      "backup_sha256": "f7784693194b8657d1bf70c37ea70f4a2d694c4566ec41550a8e650eb600aaa4",
+      "mode": "100644"
+    },
+    "src/setupTests.js": {
+      "original_sha256": "22583759d0045fdf8d62c9db0aacba9fd8bddde79c671aa08c97dcfd4e930cc6",
+      "backup_sha256": "22583759d0045fdf8d62c9db0aacba9fd8bddde79c671aa08c97dcfd4e930cc6",
+      "mode": "100644"
+    },
+    "src/logo.svg": {
+      "original_sha256": "6000b0e9b0b05b3f112de04f0d039768a1db63588ff9b6ef7099dbd71632f383",
+      "backup_sha256": "6000b0e9b0b05b3f112de04f0d039768a1db63588ff9b6ef7099dbd71632f383",
+      "mode": "100644"
+    },
+    "src/App.js": {
+      "original_sha256": "ea5b2a72e3b8251d707853a2a4ba3de7600a678e922c29cac130875338cd2604",
+      "backup_sha256": "ea5b2a72e3b8251d707853a2a4ba3de7600a678e922c29cac130875338cd2604",
+      "mode": "100644"
+    },
+    "src/components/TravelChatbot.js": {
+      "original_sha256": "f766d9fbf0f2850ff00ce46c69688cb3a3883f9ba3036de06b53eaa6ba98d729",
+      "backup_sha256": "f766d9fbf0f2850ff00ce46c69688cb3a3883f9ba3036de06b53eaa6ba98d729",
+      "mode": "100644"
+    },
+    "src/components/Map.js": {
+      "original_sha256": "d8b8c623d6077c837a55a5079d261c8340b4657adeed30dc07a43c195a66f715",
+      "backup_sha256": "d8b8c623d6077c837a55a5079d261c8340b4657adeed30dc07a43c195a66f715",
+      "mode": "100644"
+    },
+    "src/components/ui/button.js": {
+      "original_sha256": "45c36e7d8a92ab62796e8b865d0659c7bf7c125c789cd77740f761acd587b98c",
+      "backup_sha256": "45c36e7d8a92ab62796e8b865d0659c7bf7c125c789cd77740f761acd587b98c",
+      "mode": "100644"
+    },
+    "src/components/ui/card.js": {
+      "original_sha256": "ca438860688c8fad2186e668d07eb947517be03456e44761e1c56826fe4e6204",
+      "backup_sha256": "ca438860688c8fad2186e668d07eb947517be03456e44761e1c56826fe4e6204",
+      "mode": "100644"
+    },
+    "src/components/ui/input.js": {
+      "original_sha256": "a9fa4f5a5028a451b77d874bed55f0c6f68e928b4c9949532a6925e2846a3e2d",
+      "backup_sha256": "a9fa4f5a5028a451b77d874bed55f0c6f68e928b4c9949532a6925e2846a3e2d",
+      "mode": "100644"
+    },
+    "src/api/chatbot.js": {
+      "original_sha256": "896ec437ace9fdc8c4d718a4f67a579d4c7f95fe932e6ef3a654e176175affd3",
+      "backup_sha256": "896ec437ace9fdc8c4d718a4f67a579d4c7f95fe932e6ef3a654e176175affd3",
+      "mode": "100644"
+    }
+  },
+  "nested_repositories": [],
+  "scope": "Current source snapshot, with credential redactions and listed exclusions. Git history is not copied."
+}
